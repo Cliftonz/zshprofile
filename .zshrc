@@ -54,6 +54,11 @@ esac
 # export ANDROID_HOME=$HOME/Library/Android/sdk
 # export PATH=$ANDROID_HOME/emulator:$ANDROID_HOME/tools:$ANDROID_HOME/tools/bin:$ANDROID_HOME/platform-tools:$PATH
 
+# --- Auto-update dotfiles ---
+if [ -d "$HOME/zshprofile/.git" ]; then
+  git -C "$HOME/zshprofile" pull --quiet &>/dev/null &!
+fi
+
 # --- Machine-specific overrides ---
 # Source a local file for per-machine config that shouldn't be committed
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
