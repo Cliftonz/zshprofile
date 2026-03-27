@@ -62,3 +62,8 @@ fi
 # --- Machine-specific overrides ---
 # Source a local file for per-machine config that shouldn't be committed
 [ -f "$HOME/.zshrc.local" ] && source "$HOME/.zshrc.local"
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/zacclifton/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
