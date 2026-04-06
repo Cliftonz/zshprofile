@@ -67,3 +67,5 @@ fpath=(/Users/zacclifton/.docker/completions $fpath)
 autoload -Uz compinit
 compinit
 # End of Docker CLI completions
+
+echo 'eval "$(direnv hook zsh)"' >> ~/.zshrc
